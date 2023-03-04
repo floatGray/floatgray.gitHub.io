@@ -1,47 +1,6 @@
+## 🚀 项目结构
 
-[中文版本说明](./README_CN.md)
-
-## 👏🏻 Introduction
-
-This is a minimalist, beautiful, responsive blogging program written in Astro.
-
-## Preview
-
-[https://yufengbiji.com](https://yufengbiji.com)
-[https://astro.yufengbiji.com](https://astro.yufengbiji.com)
-
-### Home
-
-![首页](./public/preview/preview_index.png)
-
-### Dark mode
-
-![文章黑暗模式](./public/preview/preview_dark.png?)
-
-### Normal article
-
-![普通文章模式](./public/preview/preview_light.png)
-
-### Syntax highlighting
-
-![Syntax](./public/preview/preview_syntaxHighlighting.png)
-
-### Three display model of images
-
-![](./public/preview/preview_different_mode.png)
-
-The three display modes of images are: `wide`, `big`, `inline`.
-When you edit your markdown file, you can add `wide` or `big` or `inline` to the image alt, like this:
-
-```markdown
-![alt content|wide](a.png)
-```
-
-<strong>The Separator is `|`, and the default mode is `big`.</strong>
-
-## 🚀 Project Structure
-
-In this Astro project, you'll see the following folders and files:
+在这个项目中，你可以看到如下结构
 
 ```
 |-- README.md
@@ -52,11 +11,11 @@ In this Astro project, you'll see the following folders and files:
 |   `-- static
 |-- src
 |   |-- components
-|   |   |-- BaseHead.astro // common <head> tags
-|   |   |-- Footer.astro
-|   |   |-- Header.astro
-|   |   `-- Navigation.astro
-|   |-- consts.js
+|   |   |-- BaseHead.astro // 公共头部 head 标签
+|   |   |-- Footer.astro  // 底部
+|   |   |-- Header.astro // 头部
+|   |   `-- Navigation.astro // 导航
+|   |-- consts.js // 常量,包括网站的名称，地址等。
 |   |-- env.d.ts
 |   |-- layouts
 |   |   |-- BaseLayout.astro
@@ -67,35 +26,25 @@ In this Astro project, you'll see the following folders and files:
 |   |   |-- about.astro
 |   |   |-- archive.astro
 |   |   |-- index.astro
-|   |   |-- posts 
-|   |   |   |-- some markdown post.md // markdown post 
+|   |   |-- posts
+|   |   |   |-- some markdown post.md  // 这里写文章
 |   |   |-- rss.xml.js // RSS feed
 |   |   `-- tags
-|   |       `-- [tag].astro // dynamic route of all posts with a given tag
+|   |       `-- [tag].astro // 标签页
 |   |-- styles
-|   |   `-- global.css // global styles
+|   |   `-- global.css // 全局样式
 |   `-- utils.js
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🧞 使用方法
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+在项目根目录下执行这些命令:
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
+| 命令                   | 动作                                             |
 | :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
+| `npm install`          | 安装依赖                                         |
+| `npm run dev`          | 本地预览 `localhost:3000`                        |
+| `npm run build`        | 编译生成静态网站，结果在 `./dist/`               |
+| `npm run preview`      | 在发布之前，可以本地预览                         |
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
